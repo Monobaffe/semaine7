@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<<html lang="fr">
+<head>
+	<!--[if IE]>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<![endif]--><!--force la compatibilité IE-->
+	<meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!--adapte aux smartsphones-->
+    <meta name="description" content="acceuil-cv-portfolio-base_carousel"><!--description meta-->
+    <meta name="author" content="mathieu lagneau">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<title>Index CV</title>
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+		<!--script lien vers bib jquery-->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.min.js"></script> <!--fichier jquery pour l'effet "hover"-->
+    <script type="text/javascript" src="js/jquery.mixitup.min.js"></script> <!-- fichier JQuery pour l'effet filtre-->
+    
+    <script type="text/javascript">
+    $(function () {
+        
+        var filterList = {
+        
+            init: function () {
+            
+                // Plugin Mixitup, qui permet de filtrer les vignettes par catégorie
+                $('#portfoliolist').mixitup({
+                    targetSelector: '.portfolio',
+                    filterSelector: '.filter',
+                    effects: ['fade'],
+                    easing: 'snap',
+                    // call the hover effect
+                    onMixEnd: filterList.hoverEffect()
+                });             
+            
+            },
+            
+            hoverEffect: function () {
+            
+                // Fonction pour l'effet "hover"
+                $('#portfoliolist .portfolio').hover(
+                    function () {
+                        $(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+                        $(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');             
+                    },
+                    function () {
+                        $(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+                        $(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');                               
+                    }       
+                );              
+            
+            }
+        };
+        
+        // Lance les deux fonctions "hover" et "filtre"
+        filterList.init();
+        
+        
+    }); 
+    </script>
+</head>
+
+<body>
+					<!--Barre de navigation-->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container"><!--contient le menu nav-->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-examplenavbar-collapse-1">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>	
+			</button>
+			<img class="logo img-responsive img-rounded" src="http://lorempixel.com/150/50/nature" alt="logo ou texte"><!--logo ou texte en 150 sur 50 px-->
+		</a>
+		</div>
+		<!--Rassemblent les liens de nav,des formulaires et autres-->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li>
+					<a href="#">Accueil</a>
+				</li>
+				<li>
+					<a href="#">Portfolio</a>
+				</li>
+				<li>
+					<a href="#">Contact</a>
+				</li>
+				<li>
+					<a href="#">Curriculum</a>
+				</li>
+			</ul>
+		</div>  <!--/navbar collapse-->
+	</div> <!-- /container-->
+	</nav>	<!--/nav-->
+
+				<!--contenu principal-->
+
+	<div class="container">  <!--début du container-->
+<header><!--haut d'entête-->
+	  <div class="row"><!--début du row-->
+
+	  <div class="col-md-8"><!--début col md8-->
+  	   		<img class="img-responsive img-rounded" src="http://lorempixel.com/900/350/nature" alt="lorem-pixum">
+  	  </div><!--fin col md8-->
+  	  	<div class="col-md-4"><!--début col md 4-->
+  	  		<h1>Lagneau Mathieu</h1>
+  	  		<p>En cours d'apprentissage: Développeur Front-End.Back-End.</p>
+  	  		<a class="btn btn-primary btn-md" href="#">Plus d'Info!</a>
+  	  	</div><!--fin col md 4-->
+	  </div><!--fin du row-->
+</header><!--fin de l'entête-->
+
+<hr><!--défini un changement thématique dans le contenu-->
+
+				<!--Barre d'infos général-->
+				<div class="row"><!--debut du row barre d'info-->
+					<div class="col-lg-12"><!--debut colonne info 12-->
+						<div class="well text-center"><!--barre info-->
+						Mes coordonnées: TEL:06.59.52.71.37 /Email: mathieu.lagneau86@laposte.net
+						</div><!--fin barre info fond griser-->
+					</div><!--fin colonne info 12-->
+				</div><!--fin du row barre d'info-->
+
+<section><!--corps principal-->
+  	 <div class="row"><!--début du row-->
+  	 	<div class="col-md-4"><!--debut colonne 4-->
+  	 		<h2>Ambitions</h2>
+  	 		<p>Mes ambitions seraient idéalement:<br >
+  	 		 d'obtenir les qualifications nécessaires
+  	 		 des différents languages web/serveurs et frameworks existants,
+             me spécialiser dans les plus populaires sur le marché et 
+             pouvoir les mettres en pratiquent quotidiennement 
+             dans un milieu pro évolutif.<br >
+             Formation en cours: "Games of codes 2015"."simplonline"</p>
+             <a class="btn btn-default" href="#">Plus d'Info à Venir..</a><!--bouton info-->
+  	 	</div><!--fin colonne 4-->
+  	<div class="col-md-4"><!--debut seconde colonne 4-->
+  			<h2>Formations</h2>
+  			<ul>
+  				 <li>2014 CAPA Horticole, option prod."florales et légumières".</li>
+  				 <li>Lycée Agricole de Châteauroux.</li>  			
+  				 <li>2005 BEP Hôtellerie-Restauration,option cuisine.</li>
+  				 <li>lycée Jean Guehenno,Saint Amand-Montrond.</li>
+  			</ul>
+  			<a class="btn btn-default" href="#">Plus d'Info à Venir..</a><!--bouton info-->
+  	</div> <!--fin seconde colonne 4-->	
+
+  	<div class="col-md-4"><!--debut troisième colonne-->
+  			<h2>Expériences Pro's</h2>
+  			<ul>
+  				<li>Téléconseiller/Back office. "Armatis-Châteauroux"</li>
+  				<li>Agent d'entretien espace rural, Clarisse Environnement</li>
+  				<li>Agent qualifié cuisine, Centre hospitalier Saint Amand-Montrond</li>
+  				<li>Cuisinier en pâtisserie, Le Noirlac</li>
+  			</ul>
+  			<a class="btn btn-default" href="#">Plus d'Info à Venir..</a><!--bouton info-->
+  	</div><!--fin troisième colonne-->
+  	 </div><!--fin du row principal-->
+
+</section><!--fin 1ere section  corps principal-->
+
+<hr><!--changement théma/section-->
+
+<section><!--début seconde section-->
+
+<h2>Mon portfolio</h2>
+	<!--data-filter filtre les vignettes par catégorie-->
+	<ul id="filters" class="clearfix row">
+		<li><span class="filter active" data-filter="cat1 cat2 cat3 cat4 cat5 cat6">Tous mes catégories</span></li>
+		<li><span class="filter" data-filter="cat1">HTML5CSS3</span></li>
+		<li><span class="filter" data-filter="cat2">Javascript</span></li>
+		<li><span class="filter" data-filter="cat3">Bootstrap</span></li>
+		<li><span class="filter" data-filter="cat4">Ruby</span></li>
+		<li><span class="filter" data-filter="cat5">Drawing</span></li>
+		<li><span class="filter" data-filter="cat6">Divers</span></li>
+	</ul>
+
+	<div id="portfoliolist"><!--contient les vignettes du portfolio-->
+
+		<div class="portfolio cat2" data-cat="cat2">
+			<div class="portfolio-wrapper">
+				<img src="pictures/portfolios/js/logojavascript.jpg" alt="">
+			<div class="label">
+				<div class="label-text">
+					<a class="text-title">Javascript</a>
+					<span class="text-category">Javascript</span>
+				</div>
+				<div class="label-bg"></div>
+			</div>
+			</div>
+		</div>
+
+		<div class="portfolio cat1" data-cat="cat1">
+			<div class="portfolio-wrapper">
+				<img src="pictures/portfolios/html-css/html.jpg" alt="">
+			<div class="label">
+				<div class="label-text">
+					<a class="text-title">html-css</a>
+					<span class="text-category">HTML5CSS3</span>
+				</div>
+				<div class="label-bg"></div>
+			</div>
+			</div>
+		</div>
+
+		<div class="portfolio cat3" data-cat="cat3">
+			<div class="portfolio-wrapper">
+				<img src="pictures/portfolios/bootstrap/divshot.jpg" alt="">
+			<div class="label">
+				<div class="label-text">
+					<a class="text-title">divshot</a>
+					<span class="text-category">Bootstrap</span>
+				</div>
+				<div class="label-bg"></div>
+			</div>
+			</div>
+		</div>
+
+		<div class="portfolio cat1" data-cat="cat1">
+			<div class="portfolio-wrapper">
+				<img src="pictures/portfolios/html-css/profilsimplon.jpg" alt="">
+			<div class="label">
+				<div class="label-text">
+					<a class="text-title">profil</a>
+					<span class="text-category">HTML5CSS3</span>
+				</div>
+				<div class="label-bg"></div>
+			</div>
+			</div>
+		</div>
+
+		<div class="portfolio cat6" data-cat="cat6">
+			<div class="portfolio-wrapper">
+				<img src="pictures/portfolios/Divers/chat2.jpg" alt="">
+			<div class="label">
+				<div class="label-text">
+					<a class="text-title">chat-simplon</a>
+					<span class="text-category">Divers</span>
+				</div>
+				<div class="label-bg"></div>
+			</div>
+			</div>
+		</div>
+
+		<div class="portfolio cat4" data-cat="cat4">
+			<div class="portfolio-wrapper">
+				<img src="pictures/portfolios/ruby/openfoodfacts.png" alt="">
+			<div class="label">
+				<div class="label-text">
+					<a class="text-title">foodfacts</a>
+					<span class="text-category">Ruby</span>
+				</div>
+				<div class="label-bg"></div>
+			</div>
+			</div>
+		</div>
+
+		<div class="portfolio cat3" data-cat="cat3">
+			<div class="portfolio-wrapper">
+				<img src="pictures/portfolios/bootstrap/sitebootstrap.jpg" alt="">
+			<div class="label">
+				<div class="label-text">
+					<a class="text-title">site-bootstrap</a>
+					<span class="text-category">Bootstrap</span>
+				</div>
+				<div class="label-bg"></div>
+			</div>
+			</div>
+		</div>
+
+		<div class="portfolio cat5" data-cat="cat5">
+			<div class="portfolio-wrapper">
+				<img src="pictures/portfolios/drawing/god.png" alt="">
+			<div class="label">
+				<div class="label-text">
+					<a class="text-title">Anubis</a>
+					<span class="text-category">Drawing</span>
+				</div>
+				<div class="label-bg"></div>
+			</div>
+			</div>
+		</div>
+
+		<div class="portfolio cat6" data-cat="cat6">
+			<div class="portfolio-wrapper">
+				<img src="pictures/portfolios/Divers/bbchat.jpg" alt="">
+			<div class="label">
+				<div class="label-text">
+					<a class="text-title">Chat</a>
+					<span class="text-category">Divers</span>
+				</div>
+				<div class="label-bg"></div>
+			</div>
+			</div>
+		</div>
+
+		<div class="portfolio cat4" data-cat="cat4">
+			<div class="portfolio-wrapper">
+				<img src="pictures/portfolios/ruby/ruby.png" alt="">
+			<div class="label">
+				<div class="label-text">
+					<a class="text-title">ruby</a>
+					<span class="text-category">Ruby</span>
+				</div>
+				<div class="label-bg"></div>
+			</div>
+			</div>
+		</div>
+
+		<div class="portfolio cat5" data-cat="cat5">
+			<div class="portfolio-wrapper">
+				<img src="pictures/portfolios/drawing/yasuo.jpg" alt="">
+			<div class="label">
+				<div class="label-text">
+					<a class="text-title">Yas</a>
+					<span class="text-category">Drawing</span>
+				</div>
+				<div class="label-bg"></div>
+			</div>
+			</div>
+		</div>
+	</div><!--fin div/ vignettes portfolio-->
+	
+
+</section><!--fin seconde section portfolio-->
+
+<hr> <!--changement thématique /section-->
+
+<footer>	<!--début bas de page-->
+	<div class="row"><!--début du row-->
+		<div class="col-lg-12"><!--colonne de 12 footer-->
+<hr>
+						<!--Incrustation  autres-->
+ <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2731.0684696207527!2d1.6732425158518156!3d46.80295715113724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47fba0909b439b41%3A0xfa63a21dc7262979!2s25+Rue+d&#39;Anjou%2C+36000+Ch%C3%A2teauroux!5e0!3m2!1sfr!2sfr!4v1448491005400" width="100%" height="" frameborder="0" style="border:0" allowfullscreen></iframe>
+			<p>ZeroCopyright@Monobaffe-neverafk-2015-freesource-gimmethecode-Aucun droits.</p>
+		</div><!--fin de colonne footer-->
+	</div><!--fin du row-->
+</footer><!--fin bas de page-->
+	  </div><!--fin container-->
+
+	<!--jquery bootstrap-->
+<!--	<script src="js/jquery.js"></script>
+	
+	<script src="js/bootstrap.min.js"></script> -->   <!--java script bootstrap-->
+	
+</body>
+</html>
